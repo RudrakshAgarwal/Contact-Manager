@@ -1,6 +1,9 @@
 package com.contactmanager.Entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +14,11 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
+    @NotBlank(message = "Name field is required !!")
+    @Size(min = 2, max = 20, message = "Minimum 2 & Maximum 20 characters are allowed")
     private String name;
+    @NotBlank(message = "Email field is required !!")
+    @Email(regexp = "^(?=.{1,64}@)[A-Za-z0-9_-]+(\\\\.[A-Za-z0-9_-]+)*@\" \n" + "+ \"[^-][A-Za-z0-9-]+(\\\\.[A-Za-z0-9-]+)*(\\\\.[A-Za-z]{2,})$")
     @Column(unique = true)
     private String email;
     private String password;

@@ -2,6 +2,14 @@ body{
     background: #e2e2e2!important;
 }
 
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif
+}
+
+
 /* Base Page */
 .bg-primary{
     background: #009688 !important;
@@ -22,5 +30,93 @@ body{
 .my-card{
     padding: 20px;
     background: #ffffff;
+}
 
+
+/* Login in page */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+.container {
+    margin: 50px auto
+}
+
+.panel-heading {
+    text-align: center;
+    margin-bottom: 10px
+}
+
+#forgot {
+    min-width: 100px;
+    margin-left: auto;
+    text-decoration: none
+}
+
+a:hover {
+    text-decoration: none
+}
+
+.form-inline label {
+    padding-left: 10px;
+    margin: 0;
+    cursor: pointer
+}
+
+.btn.btn-primary {
+    border-radius: 15px;
+}
+
+.btn-block{
+    display: grid;
+}
+
+.panel {
+    min-height: 380px;
+    box-shadow: 20px 20px 80px rgb(218, 218, 218);
+    border-radius: 12px
+}
+
+.input-field {
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    color: #4343ff
+}
+
+input[type='text'],
+input[type='password'] {
+    border: none;
+    outline: none;
+    box-shadow: none;
+    width: 100%
+}
+
+.fa-eye-slash.btn {
+    border: none;
+    outline: none;
+    box-shadow: none
+}
+
+img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    position: relative
+}
+
+@media(max-width: 360px) {
+    #forgot {
+        margin-left: 0;
+        padding-top: 10px
+    }
+
+    body {
+        height: 100%
+    }
+
+    .container {
+        margin: 30px 0
+    }
 }
